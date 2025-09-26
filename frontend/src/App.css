@@ -1,0 +1,321 @@
+/* Base Styling */
+body {
+  font-family: system-ui, sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100%; /* ensure body covers full height */
+}
+
+/* App container */
+.App {
+  max-width: 1000px;
+  margin: auto;
+  background: rgba(255, 255, 255, 0.9); /* semi-transparent overlay */
+  padding: 40px 50px;
+  border-radius: 18px;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.5s ease-in-out;
+  position: relative;
+}
+
+/* Top Bar */
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #eff6ff;
+  padding: 10px 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  font-size: 0.95em;
+  color: #1f2937;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.4;
+}
+
+.logout-btn {
+  background: #ef4444;
+  color: white;
+  padding: 6px 12px;
+  font-size: 0.9em;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.logout-btn:hover {
+  background: #dc2626;
+}
+
+/* Headings */
+h1, h2 {
+  text-align: center;
+  color: #1e3a8a;
+  margin-bottom: 20px;
+}
+h1 {
+  font-size: 2.5em;
+}
+h2 {
+  font-size: 1.8em;
+}
+
+/* Form Elements */
+form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 25px;
+  justify-content: center;
+}
+input[type="text"],
+input[type="password"],
+input[type="email"],
+textarea {
+  flex: 1;
+  min-width: 60%;
+  padding: 12px;
+  font-size: 1em;
+  border: 2px solid #cbd5e1;
+  border-radius: 8px;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+input:focus, textarea:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 6px rgba(59, 130, 246, 0.5);
+  outline: none;
+}
+button {
+  background: linear-gradient(to right, #3b82f6, #2563eb);
+  color: white;
+  border: none;
+  padding: 12px 18px;
+  font-size: 1em;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+button:hover {
+  background: linear-gradient(to right, #2563eb, #1d4ed8);
+  transform: translateY(-1px);
+}
+
+/* Auth + Main Screens */
+.auth-bg,
+.main-bg {
+  min-height: 100vh;
+  display: flex;
+  align-items: stretch; /* ensures both left and right panels stretch full */
+}
+
+/* Left background image panel */
+.left-bg {
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  width: 100%;
+}
+
+/* Card */
+.card {
+  background: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Fade animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.position-absolute.top-0.end-0 {
+  z-index: 10;
+}
+.auth-bg {
+  min-height: 100vh;
+  display: flex;
+  align-items: stretch;
+}
+
+/* Discussion Board header styling */
+.discussion-header {
+  position: relative;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.discussion-title {
+  font-weight: bold;
+  font-size: 2rem;
+  color: #fff;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
+}
+
+/* Small red logout button */
+.logout-btn-small {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #ef4444;
+  color: white;
+  font-size: 0.8rem;
+  padding: 4px 10px;
+  border-radius: 5px;
+  border: none;
+  transition: background 0.3s ease;
+}
+.logout-btn-small:hover {
+  background-color: #dc2626;
+}
+.logout-btn-big {
+  background: #3b82f6;
+  color: white;
+  padding: 10px 20px;
+  font-size: 1.1em;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.logout-btn-big:hover {
+  background: #ef4444;
+  transform: scale(1.05);
+}
+
+/* Hero Section */
+.hero-section {
+  height: 100vh;
+  background: url("./images/background.jpg") no-repeat center center/cover; /* ✅ fixed path */
+}
+.hero-section h1 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+.hero-section p {
+  font-size: 1.2rem;
+}
+/* Base Styling */
+body {
+  font-family: system-ui, sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: #f9fafb;
+}
+
+/* Navbar */
+.navbar-custom {
+  background: #1e3a8a;
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.navbar-custom .brand {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #fff;
+}
+.navbar-custom .nav-links {
+  display: flex;
+  gap: 20px;
+}
+.navbar-custom .nav-links a,
+.navbar-custom .nav-links button {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.navbar-custom .nav-links a:hover,
+.navbar-custom .nav-links button:hover {
+  color: #facc15; /* yellow hover */
+}
+.logout-btn-big {
+  background: #3b82f6;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.logout-btn-big:hover {
+  background: #ef4444;
+  transform: scale(1.05);
+}
+
+/* Hero Section */
+.hero-section {
+  height: 80vh;
+  background: url("./images/background.jpg") no-repeat center center/cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
+}
+.hero-section h1 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+.hero-section p {
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+
+/* Three Column Section */
+.three-col {
+  padding: 60px 20px;
+  background: #f1f5f9;
+}
+.three-col h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-weight: bold;
+  color: #1e3a8a;
+}
+.three-col .col-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+.three-col .col-card:hover {
+  transform: translateY(-5px);
+}
+.three-col img {
+  max-width: 100px;
+  margin-bottom: 15px;
+}
+
+/* Discussion Board */
+.discussion-header {
+  text-align: center;
+  margin: 40px 0 20px 0;
+}
+.discussion-title {
+  font-weight: bold;
+  font-size: 2rem;
+  color: #1e3a8a;
+}
+
+/* Footer */
+.footer {
+  background: #1e3a8a;
+  color: #fff;
+  text-align: center;
+  padding: 15px;
+  margin-top: 40px;
+}
